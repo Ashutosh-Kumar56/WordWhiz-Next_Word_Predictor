@@ -3,50 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/bubbly-2" rel="stylesheet">
     <title>Next Word Predictor</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
+        html{
+            height: 100%;
+            margin: 0%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 208, 0);
+            font-family: 'Bubbly', sans-serif;
         }
-        form {
-            margin-bottom: 20px;
+        .container{
+            padding: 5px;
         }
-        input[type="text"] {
-            width: 300px;
-            padding: 10px;
-            margin-right: 10px;
+
+        h1{
+            text-align: center;
+            color:white;
+            font-size: 100px;
+            margin-bottom: 0;
         }
-        button {
-            padding: 10px 20px;
-            background-color: #007BFF;
+
+        .form{
+            margin-top: 0;
+            font-size: 40px;
+            display: flex;
+        }
+
+        .item{
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        input{
+            font-family: 'Bubbly', sans-serif; 
+            font-size: 30px;
+            border-radius: 10px;
+        }
+
+        button{
+            background-color: rgb(255, 208, 0);
+            font-size: 20px;
+            border: 2px solid rgb(255, 208, 0);
+            font-family: 'Bubbly', sans-serif;
+            font-weight: bolder;
+            height: 100%;
+            border-radius: 30px;
+            margin-left: 3px;
+        }
+
+        .result{
             color: white;
-            border: none;
-            cursor: pointer;
+            font-family: 'Bubbly', sans-serif;
+            font-size: 30px;
+            text-align: center;
         }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
-        }
+
     </style>
 </head>
 <body>
-    <h1>Next Word Predictor</h1>
-    <form action="/predict" method="post">
-        <label for="sequence">Enter a phrase:</label>
-        <input type="text" id="sequence" name="sequence" placeholder="Type a phrase..." required>
-        <button type="submit">Predict</button>
-    </form>
+    <div class="container">
+        <h1>Word Whizz</h1>
+        <div class="form">
+            <form action="/predict" method="post">
+                <div class="item">
+                    <label for="sequence">Enter a phrase:</label>
+                </div>
+                <div class="item">
+                    <input type="text" id="sequence" name="sequence" placeholder="Type a phrase..." required>
+                </div>
+                <div class="item">
+                    <button type="submit">Predict</button>
+                </div>
+            </form>
+        </div>
+        
+        <br><br><br>
 
-    {% if prediction %}
-    <div class="result">
-        <strong>{{ prediction }}</strong>
+        {% if prediction %}
+        <div class="result">
+            <strong>{{ prediction }}</strong>
+        </div>
+        {% endif %}
+        <br><br><br><br>
     </div>
-    {% endif %}
+    
 </body>
 </html>
 

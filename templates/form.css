@@ -1,0 +1,61 @@
+html{
+    height: 100%;
+    margin: 0%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 208, 0);
+    font-family: 'Bubbly', sans-serif;
+
+}
+.container{
+    padding: 5px;
+}
+
+h1{
+    text-align: center;
+    color:white;
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+.form{
+    margin-top: 0;
+    font-size: 40px;
+    display: flex;
+}
+
+.item{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+input{
+    font-family: 'Bubbly', sans-serif; 
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+button{
+    background-color: rgb(255, 208, 0);
+    font-size: 20px;
+    border: 2px solid rgb(255, 208, 0);
+    font-family: 'Bubbly', sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    border-radius: 30px;
+    margin-left: 3px;
+}
+
+.result{
+    color: white;
+    font-family: 'Bubbly', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+
