@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('form.html')  # Render the input form
+    return render_template('index.html')  # Render the input form
 
 
 
@@ -25,7 +25,7 @@ def predict():
         sequence_vector = vectorizer.transform([sequence])
         predicted_word = model.predict(sequence_vector)[0]
         
-        return render_template('form.html', prediction=f"Next word: {predicted_word}")
+        return render_template('index.html', prediction=f"Next word: {predicted_word}")
 
 if __name__ == '__main__':
     app.run(debug=True)
